@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    margin: 0.5rem;
+}
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, serif;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: left;
+    background-color: #f1f1f1;
+}
+header {
+    position: sticky;
+    top: 0;
+}
+#navbar::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#navbar > ul {
+    background-color: #111;
+    list-style-type: none;
+    overflow: hidden;
+}
+#navbar > ul > li > a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.75rem 0.8rem;
+    color: #f1f1f1;
+    display: block;
+    float: left;
+}
+#navbar > ul > li > a:hover {
+    background-color: greenyellow;
+    color: black;
+}
+#welcome-section {
+    padding: 3rem;
+    background-color: white;
+    text-align: center;
+    font-size: 1.7rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100vh;
+}
+#welcome-section img {
+    max-width: 100%;
+}
+#projects {
+    height: 100%;
+    /* height: calc(100vh - 5rem); */
+    background-color: rgba(168, 210, 230, 0.3);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+}
+#projects h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+#projects img {
+    padding: 0 2rem;
+    height: 300px;
+    max-width: 100%;
+}
+#projects figcaption {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.2rem;
+    color: #ccc;
+    background-color: #111;
+    /* width: calc(100% - 4rem); */
+    text-align: center;
+    margin: -0.6rem 2rem;
+    /* padding: 0 2rem; */
+}
+#projects::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+footer {
+    background-color: white;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+footer ul {
+    list-style-type: none;
+}
+footer ul li a img {
+    width: 3rem;
+    height: 3rem;
+    float: right;
+    margin-right: 3.5rem;
+}
+footer p {
+    margin-left: 3.5rem;
+    float: left;
+}
+#footer::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+ #welcome-section {
+    height: auto;
+ }
+@media all and (max-width: 1200px) {
+    #projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+ #welcome-section {
+    height: auto;
+ }
+}
+@media all and (max-width: 992px) {
+ #projects {
+     grid-template-columns: 1fr;
+ }
+ #welcome-section {
+    height: auto;
+ }
+ footer p {
+     margin: auto;
+ }
+ #profile ul li a img {
+    margin: auto;
+}
+footer {
+    padding: 1rem;
+}
+}
+@media all and (max-width: 600px) {
+    #navbar > ul > li > a {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    footer {
+        padding: 0;
+    }
+}
